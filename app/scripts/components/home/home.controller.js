@@ -14,13 +14,16 @@
 		$scope.users = [{
 			user: 1,
 			cellID: 1
+		},{
+			user: 2,
+			cellID: 1
 		}];
 		
 		$scope.currentUser = $scope.users[0];
 		
 		function movePos(user, cellID) {
 			// default
-			$( document ).ready(function() {
+			angular.element( document ).ready(function() {
 				if(!user && !cellID) {
 					$("#user").appendTo($("#cell1"))
 				} else {
@@ -29,9 +32,9 @@
 			});
 		}
 		
-		$scope.users.forEach(function (item) {
-			movePos(item.user, item.cellID);
-		});
+		// $scope.users.forEach(function (item) {
+		// 	movePos(item.user, item.cellID);
+		// });
 		
 		function moveUser(user) {
 			var currentCell;
@@ -48,15 +51,28 @@
 				user.cellID  = temp;
 			}
 			if(user.cellID === 100) {
-				alert("You have WON!");
+				alert("You have WON! User " + user.user);
 				window.location.reload()
 			} else {
-				movePos(user.user,user.cellID);
+				// movePos(user.user,user.cellID);
 			}
 			$scope.move.push(currentCell);
 		}
 		
 		$scope.diceVal = null;
+		function changeUser() {
+			for(var i=0;i<$scope.users.length;i++) {
+				if ($scope.users[i].user === $scope.currentUser.user) {
+					if (i===$scope.users.length-1) {
+						$scope.currentUser = $scope.users[0];
+					} else {
+						$scope.currentUser = $scope.users[i+1];
+					}
+					break;
+				}
+			}
+			console.log($scope.currentUser)
+		}
 		$scope.rollDice = function () {
 			$scope.diceVal = Math.floor(Math.random() * 6) + 1;
 			
@@ -65,6 +81,7 @@
 				$scope.currentUser.cellID = temp;
 			}
 			moveUser($scope.currentUser);
+			changeUser();
 		};
 		
 		$scope.board = [];

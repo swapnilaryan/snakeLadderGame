@@ -9,6 +9,9 @@
         height: 1000px;
         overflow: scroll;
     }
+    .even {
+        color: red;
+    }
 </style>
 <div class="container">
     <div class="row">
@@ -26,6 +29,9 @@
                 <tr ng-repeat="row in board">
                     <td ng-repeat="col in row" id="{{'cell'+col.val}}">
                         {{col.val}}
+                        <i class="fa fa-user pull-right" ng-repeat="u in users"
+                           id="{{'user'+u.user}}" ng-class="{'even':u.user%2===0}"
+                           ng-if="u.cellID == col.val"></i>
                         <img src="../../images/ladder.svg" ng-if="col.ladder">{{col.ladder}}
                         <img src="../../images/snake.svg" ng-if="col.snake">{{col.snake}}
                     </td>
@@ -39,5 +45,3 @@
 
 
 </div>
-
-<i class="fa fa-user pull-right" id="user1"></i>
