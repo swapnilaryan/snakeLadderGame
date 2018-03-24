@@ -1,0 +1,54 @@
+<!doctype html>
+<!--suppress HtmlUnknownTarget -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Snake Ladder Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- node:css -->
+        <link rel="stylesheet"
+              href="node_modules/angular-toastr/dist/angular-toastr.min.css">
+        <link rel="stylesheet"
+              href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+        <link rel="stylesheet"
+              href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet"
+              href="node_modules/ng-tags-input/build/ng-tags-input.bootstrap.min.css">
+        <link rel="stylesheet"
+              href="node_modules/ng-tags-input/build/ng-tags-input.min.css">
+        <link rel="stylesheet"
+              href="node_modules/angular-spinkit/build/angular-spinkit.min.css">
+        <link rel="stylesheet" href="node_modules/ui-select/dist/select.min.css">
+        <link rel="stylesheet"
+              href="node_modules/font-awesome/css/font-awesome.min.css">
+        <!-- endnode -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="node_modules/ng-material-floating-button/mfb/dist/mfb.min.css">
+        <!-- endbuild -->
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+    </head>
+    <body ng-app="snakeLadderGame" ng-cloak>
+    <div ui-view></div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- node:js -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- endnode -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/config/config.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/components/home/home.controller.js"></script>
+    <!-- endbuild -->
+
+    </body>
+</html>

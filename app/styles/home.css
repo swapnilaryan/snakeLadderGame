@@ -1,0 +1,52 @@
+#logo{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    width: 500px;
+    height:50vh;
+}
+.dashboard-search {
+    text-align: center;
+}
+#bb-logo{
+    margin-top: -8px;
+}
+input{
+    padding: 10px;
+    margin: 10px;
+    height: 35px;
+    width: 500px;
+    border:1px solid #eaeaea;
+    outline:none;
+}
+input:hover{
+    border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+}
+input:focus{
+    border-color:#002938;
+}
+
+input[type="submit"] {
+    border-radius: 2px;
+    background: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    color: #022634;
+    cursor: default;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    padding: 0 16px;
+    height:36px;
+}
+input[type="submit"]:hover {
+    background: #a0a0a0;
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    color: black;
+    cursor: pointer;
+}
+
+#inboundPs {
+    font-size: 30px;
+    margin-top: -100px;
+}

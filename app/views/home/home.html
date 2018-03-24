@@ -1,0 +1,43 @@
+<style>
+    table { table-layout: fixed; }
+
+    td {
+        min-width: 20px !important;
+        min-height: 75px !important;
+    }
+    .moves {
+        height: 1000px;
+        overflow: scroll;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <!--<div class="col-md-2 moves">-->
+            <!--<p ng-repeat="m in move">-->
+                <!--Cell: {{m.val}} <br>-->
+                <!--Snake: {{m.snake}} <br>-->
+                <!--Ladder: {{m.ladder}} <br>-->
+            <!--<hr>-->
+            <!--</p>-->
+        <!--</div>-->
+        <div class="col-md-10">
+            <table class="table table-bordered">
+                <tbody>
+                <tr ng-repeat="row in board">
+                    <td ng-repeat="col in row" id="{{'cell'+col.val}}">
+                        {{col.val}}
+                        <img src="../../images/ladder.svg" ng-if="col.ladder">{{col.ladder}}
+                        <img src="../../images/snake.svg" ng-if="col.snake">{{col.snake}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p>Dice value = {{diceVal}}</p>
+            <button class="btn-default" ng-click="rollDice()">Roll Dice</button>
+        </div>
+    </div>
+
+
+</div>
+
+<i class="fa fa-user pull-right" id="user1"></i>
